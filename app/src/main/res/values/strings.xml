@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Delivery</string>
+    <string name="textview">TextView</string>
+    <string-array name="phone_code">
+        <item>+213</item>
+        <item>+100</item>
+        <item>+1</item>
+        <item>+400</item>
+        <item>+500</item>
+    </string-array>
+</resources>

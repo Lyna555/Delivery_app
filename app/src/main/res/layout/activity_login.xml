@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282">
+
+        <TextView
+            android:id="@+id/authentifier_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Identifiez-vous"
+            android:textSize="18dp" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/compte_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Email"
+            android:backgroundTint="@color/dark_gray"
+            android:inputType="textWebEmailAddress"
+            android:paddingBottom="20dp"
+            android:textColorHint="@color/dark_gray" />
+
+        <TextView
+            android:id="@+id/email_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:textColor="@color/red" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/white" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:ems="10"
+            android:hint="Mot de passe"
+            android:backgroundTint="@color/dark_gray"
+            android:drawablePadding="20dp"
+            android:inputType="textPassword"
+            android:paddingBottom="20dp"
+            android:textColorHint="@color/dark_gray" />
+
+        <TextView
+            android:id="@+id/mdps_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/forget_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mot de passe oublier?"
+            android:textAlignment="textEnd"
+            android:textColor="#3F51B5"
+            android:textSize="18dp" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/orange"
+            android:text="Connectez-vous"
+            android:textColor="@color/white" />
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/no_account"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Etes-vous nouveau?"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CREER UN COMPTE"
+                android:textAlignment="center"
+                android:textColor="@color/dark_blue" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/ou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="OU"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toLeftOf="@id/ou"
+                android:background="@color/light_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toRightOf="@id/ou"
+                android:background="@color/light_gray" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/white"/>
+
+        <TextView
+            android:id="@+id/facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:drawableStart="@drawable/facebook"
+            android:text="  Continuer avec Facebook"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
