@@ -20,21 +20,16 @@
         <TextView
             android:id="@+id/identifier_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="79dp"
             android:text="Créer un nouveau compte"
-            android:textSize="18dp"/>
+            android:textSize="18dp" />
 
-        <View
-            android:id="@+id/divider8"
-            android:layout_width="match_parent"
-            android:layout_height="43dp"
-            android:background="?android:attr/listDivider"
-            android:backgroundTint="@color/white" />
+
 
         <EditText
             android:id="@+id/prenom"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_baseline_person_24"
             android:ems="10"
             android:hint="Prenom"
@@ -54,7 +49,7 @@
         <EditText
             android:id="@+id/nom"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nom"
             android:backgroundTint="@color/dark_gray"
@@ -73,7 +68,7 @@
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/dark_gray"
             android:drawableStart="@drawable/ic_baseline_email_24"
             android:drawablePadding="20dp"
@@ -93,7 +88,7 @@
         <EditText
             android:id="@+id/mdps"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:ems="10"
             android:hint="Mot de passe"
@@ -131,12 +126,11 @@
 
             <EditText
                 android:id="@+id/phone"
-                android:layout_width="193dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:backgroundTint="@color/dark_gray"
                 android:ems="10"
                 android:hint="Telephone"
-                android:backgroundTint="@color/dark_gray"
                 android:inputType="phone" />
 
         </LinearLayout>
@@ -148,19 +142,16 @@
             android:paddingStart="50dp"
             android:textColor="@color/red" />
 
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="43dp"
-            android:background="?android:attr/listDivider"
-            android:backgroundTint="@color/white" />
+
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/orange"
             android:text="Enregistrer"
+            android:paddingVertical="20dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/white" />
 
     </LinearLayout>
