@@ -34,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.BLACK));
+        getSupportActionBar().setTitle("Connnectez-Vous");
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         facebook = findViewById(R.id.facebook);
