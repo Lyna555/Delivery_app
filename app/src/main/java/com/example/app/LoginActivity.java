@@ -19,10 +19,11 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
 
     private TextView facebook;
-    private TextView creacte_account;
+    private TextView create_account;
     private Button button;
     private EditText email;
     private EditText mdps;
+
     private TextView email_err;
     private TextView mdps_err;
     private String emailText;
@@ -33,19 +34,20 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.BLACK));
-        getSupportActionBar().setTitle("Connnectez-Vous");
+        getSupportActionBar().setTitle("Connectez-vous");
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         facebook = findViewById(R.id.facebook);
-        creacte_account = findViewById(R.id.create_account);
+        create_account = findViewById(R.id.create_account);
         button = findViewById(R.id.button);
         email = findViewById(R.id.email);
         mdps = findViewById(R.id.password);
         email_err = findViewById(R.id.email_error);
         mdps_err = findViewById(R.id.mdps_error);
 
-        creacte_account.setOnClickListener(view -> {
+        create_account.setOnClickListener(view -> {
             try{
                 Intent register = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(register);
@@ -75,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
 
             if (!email_err.getText().toString().equals("") || !mdps_err.getText().toString().equals("")) {
             } else {
-                //Toast.makeText(LoginActivity.this, "Success", Toast.LENGTH_SHORT).show();
+
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
                 if (emailText.matches(emailPattern)) {
@@ -85,6 +87,7 @@ public class LoginActivity extends AppCompatActivity {
                     bundle.putSerializable("obj", info);
                     intent.putExtras(bundle);
                     startActivity(intent);
+
                 } else {
                     email_err.setText("Invalid Email");
                 }

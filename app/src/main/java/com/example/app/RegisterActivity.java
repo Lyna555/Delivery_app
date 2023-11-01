@@ -27,6 +27,8 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText email;
     private EditText phone;
     private EditText mdps;
+    private Spinner spinner;
+    private Button button;
 
     private TextView prenom_err;
     private TextView nom_err;
@@ -45,10 +47,11 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.BLACK));
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        Button b = findViewById(R.id.button);
+        button = findViewById(R.id.button);
 
         prenom = findViewById(R.id.prenom);
         nom = findViewById(R.id.nom);
@@ -62,14 +65,15 @@ public class RegisterActivity extends AppCompatActivity {
         mdps_err = findViewById(R.id.mdps_err);
         phone_err = findViewById(R.id.phone_err);
 
-        Spinner spinner = findViewById(R.id.spinner2);
+        spinner = findViewById(R.id.spinner2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.phone_code, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setSelection(0);
 
-        b.setOnClickListener(view -> {
+        button.setOnClickListener(view -> {
+
                 if (prenomText == null || prenomText.equals("")) {
                     prenom_err.setText("* Field required!");
                 } else {
@@ -116,8 +120,18 @@ public class RegisterActivity extends AppCompatActivity {
                         intent.putExtras(bundle);
                         startActivity(intent);
                     } else {
-                        if(!mdpsText.matches(passwd_pattern)) mdps_err.setText("Invalid password");
-                        if(!emailText.matches(emailPattern)) email_err.setText("Invalid email");
+
+                        if (!mdpsText.matches(passwd_pattern)){
+                            mdps_err.setText("Invalid password");
+                        } else {
+                            mdps_err.setText("");
+                        }
+
+                        if (!emailText.matches(emailPattern)){
+                            email_err.setText("Invalid email");
+                        } else {
+                            email_err.setText("");
+                        }
                     }
                 }
         });
