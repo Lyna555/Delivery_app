@@ -42,7 +42,6 @@ public class RegisterActivity extends AppCompatActivity {
     private String phoneText;
     private String mdpsText;
 
-    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

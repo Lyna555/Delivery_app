@@ -20,7 +20,6 @@ public class HomeActivity extends AppCompatActivity {
 
     private ListView listView;
 
-    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

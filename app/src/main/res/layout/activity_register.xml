@@ -48,6 +48,7 @@
             android:id="@+id/prenom_err"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingStart="50dp"
             android:textColor="@color/red" />
 
         <EditText
@@ -66,18 +67,19 @@
             android:id="@+id/nom_err"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingStart="50dp"
             android:textColor="@color/red" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:backgroundTint="@color/dark_gray"
             android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="20dp"
             android:ems="10"
             android:hint="Email"
-            android:backgroundTint="@color/dark_gray"
-            android:drawablePadding="20dp"
-            android:inputType="textEmailAddress"
+            android:inputType="textWebEmailAddress"
             tools:layout_editor_absoluteX="82dp"
             tools:layout_editor_absoluteY="112dp" />
 
@@ -85,6 +87,7 @@
             android:id="@+id/email_err"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingStart="50dp"
             android:textColor="@color/red" />
 
         <EditText
@@ -104,6 +107,7 @@
             android:id="@+id/mdps_err"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingStart="50dp"
             android:textColor="@color/red" />
 
         <LinearLayout
@@ -141,6 +145,7 @@
             android:id="@+id/phone_err"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingStart="50dp"
             android:textColor="@color/red" />
 
         <View

@@ -29,7 +29,6 @@ public class LoginActivity extends AppCompatActivity {
     private String emailText;
     private String mdpsText;
 
-    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -44,11 +44,11 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_gray"
             android:drawableStart="@drawable/ic_baseline_email_24"
             android:drawablePadding="20dp"
             android:ems="10"
             android:hint="Email"
-            android:backgroundTint="@color/dark_gray"
             android:inputType="textWebEmailAddress"
             android:paddingBottom="20dp"
             android:textColorHint="@color/dark_gray" />
