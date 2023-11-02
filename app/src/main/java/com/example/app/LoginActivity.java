@@ -1,8 +1,6 @@
 package com.example.app;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -47,15 +45,15 @@ public class LoginActivity extends AppCompatActivity {
         mdps_err = findViewById(R.id.mdps_error);
 
         create_account.setOnClickListener(view -> {
-            try{
+            try {
                 Intent register = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(register);
-            }catch (Exception e){
+            } catch (Exception e) {
                 Toast.makeText(LoginActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
             }
         });
 
-        facebook.setOnClickListener( view -> {
+        facebook.setOnClickListener(view -> {
             Uri uriUrl = Uri.parse("https://www.facebook.com/login/");
             Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
             startActivity(launchBrowser);

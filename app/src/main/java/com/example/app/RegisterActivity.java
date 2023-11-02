@@ -1,6 +1,5 @@
 package com.example.app;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -8,17 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -73,66 +67,73 @@ public class RegisterActivity extends AppCompatActivity {
 
         button.setOnClickListener(view -> {
 
-                if (prenomText == null || prenomText.equals("")) {
-                    prenom_err.setText("* Field required!");
-                } else {
-                    prenom_err.setText("");
-                }
+            if (prenomText == null || prenomText.equals("")) {
+                prenom_err.setText("* Field required!");
+            } else {
+                prenom_err.setText("");
+            }
 
-                if (nomText == null || nomText.equals("")) {
-                    nom_err.setText("* Field required!");
-                } else {
-                    nom_err.setText("");
-                }
+            if (nomText == null || nomText.equals("")) {
+                nom_err.setText("* Field required!");
+            } else {
+                nom_err.setText("");
+            }
 
-                if (emailText == null || emailText.equals("")) {
-                    email_err.setText("* Field required!");
-                } else {
-                    email_err.setText("");
-                }
+            if (emailText == null || emailText.equals("")) {
+                email_err.setText("* Field required!");
+            } else {
+                email_err.setText("");
+            }
 
-                if (mdpsText == null || mdpsText.equals("")) {
-                    mdps_err.setText("* Field required!");
-                } else {
-                    mdps_err.setText("");
-                }
+            if (mdpsText == null || mdpsText.equals("")) {
+                mdps_err.setText("* Field required!");
+            } else {
+                mdps_err.setText("");
+            }
 
-                if (phoneText == null || phoneText.equals("")) {
-                    phone_err.setText("* Field required!");
-                } else {
-                    phone_err.setText("");
-                }
+            if (phoneText == null || phoneText.equals("")) {
+                phone_err.setText("* Field required!");
+            } else {
+                phone_err.setText("");
+            }
 
-                if (!prenom_err.getText().toString().equals("") || !nom_err.getText().toString().equals("") ||
-                        !email_err.getText().toString().equals("") || !mdps_err.getText().toString().equals("") ||
-                        !phone_err.getText().toString().equals("")) {
-                } else {
-                    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-                    String passwd_pattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=-_])(?=\\S+$).{8,20}$";
+            if (!prenom_err.getText().toString().equals("") || !nom_err.getText().toString().equals("") ||
+                    !email_err.getText().toString().equals("") || !mdps_err.getText().toString().equals("") ||
+                    !phone_err.getText().toString().equals("")) {
 
-                    if (emailText.matches(emailPattern) && mdpsText.matches(passwd_pattern)) {
-                        PersonalInformation info = new PersonalInformation(prenomText, nomText, emailText,
-                                spinner.getSelectedItem().toString(), phoneText);
-                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putSerializable("obj", info);
-                        intent.putExtras(bundle);
-                        startActivity(intent);
+            } else {
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                String passwd_pattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[-@#$%^&+=_])(?=\\S+$).{8,20}$";
+
+                if (emailText.matches(emailPattern) && mdpsText.matches(passwd_pattern) && phoneText.length() == 10) {
+                    PersonalInformation info = new PersonalInformation(prenomText, nomText, emailText,
+                            spinner.getSelectedItem().toString(), phoneText);
+                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("obj", info);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                } else {
+
+                    if (!mdpsText.matches(passwd_pattern)) {
+                        mdps_err.setText("Invalid password");
                     } else {
+                        mdps_err.setText("");
+                    }
 
-                        if (!mdpsText.matches(passwd_pattern)){
-                            mdps_err.setText("Invalid password");
-                        } else {
-                            mdps_err.setText("");
-                        }
+                    if (!emailText.matches(emailPattern)) {
+                        email_err.setText("Invalid email");
+                    } else {
+                        email_err.setText("");
+                    }
 
-                        if (!emailText.matches(emailPattern)){
-                            email_err.setText("Invalid email");
-                        } else {
-                            email_err.setText("");
-                        }
+                    if (phoneText.length() < 10) {
+                        phone_err.setText("Phone number should be 10 digits");
+                    } else {
+                        phone_err.setText("");
                     }
                 }
+            }
         });
 
         prenom.addTextChangedListener(textWatcher);
@@ -144,10 +145,12 @@ public class RegisterActivity extends AppCompatActivity {
 
     private final TextWatcher textWatcher = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
 
         @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {}
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
 
         @Override
         public void afterTextChanged(Editable s) {

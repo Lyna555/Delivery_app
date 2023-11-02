@@ -1,18 +1,13 @@
 package com.example.app;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -35,9 +30,9 @@ public class HomeActivity extends AppCompatActivity {
         listView = findViewById(R.id.list);
         ArrayList<String> infoList = new ArrayList<>();
 
-        if (info.getNom()==null){
+        if (info.getNom() == null) {
             infoList.add("Email: " + info.getEmail());
-        }else{
+        } else {
             infoList.add("Nom: " + info.getNom());
             infoList.add("Prenom: " + info.getPrenom());
             infoList.add("Email: " + info.getEmail());

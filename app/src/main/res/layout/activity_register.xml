@@ -25,16 +25,15 @@
             android:textSize="18dp" />
 
 
-
         <EditText
             android:id="@+id/prenom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_gray"
             android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="20dp"
             android:ems="10"
             android:hint="Prenom"
-            android:backgroundTint="@color/dark_gray"
-            android:drawablePadding="20dp"
             android:inputType="textPersonName|textCapWords"
             tools:layout_editor_absoluteX="82dp"
             tools:layout_editor_absoluteY="112dp" />
@@ -50,10 +49,10 @@
             android:id="@+id/nom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:backgroundTint="@color/dark_gray"
             android:ems="10"
             android:hint="Nom"
-            android:backgroundTint="@color/dark_gray"
-            android:layout_marginStart="30dp"
             android:inputType="textPersonName|textCapWords"
             tools:layout_editor_absoluteX="82dp"
             tools:layout_editor_absoluteY="112dp" />
@@ -89,11 +88,11 @@
             android:id="@+id/mdps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_gray"
             android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="20dp"
             android:ems="10"
             android:hint="Mot de passe"
-            android:backgroundTint="@color/dark_gray"
-            android:drawablePadding="20dp"
             android:inputType="textPassword"
             tools:layout_editor_absoluteX="82dp"
             tools:layout_editor_absoluteY="112dp" />
@@ -143,15 +142,14 @@
             android:textColor="@color/red" />
 
 
-
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/orange"
-            android:text="Enregistrer"
-            android:paddingVertical="20dp"
             android:layout_marginTop="20dp"
+            android:backgroundTint="@color/orange"
+            android:paddingVertical="20dp"
+            android:text="Enregistrer"
             android:textColor="@color/white" />
 
     </LinearLayout>

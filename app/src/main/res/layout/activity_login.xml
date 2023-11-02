@@ -71,11 +71,11 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="56dp"
+            android:backgroundTint="@color/dark_gray"
             android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="20dp"
             android:ems="10"
             android:hint="Mot de passe"
-            android:backgroundTint="@color/dark_gray"
-            android:drawablePadding="20dp"
             android:inputType="textPassword"
             android:paddingBottom="20dp"
             android:textColorHint="@color/dark_gray" />
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:text="Mot de passe oublier?"
             android:textAlignment="textEnd"
-            android:textColor="#3F51B5"
+            android:textColor="@color/dark_blue"
             android:textSize="18dp" />
 
         <View
@@ -101,7 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:background="?android:attr/listDivider"
-            android:backgroundTint="@color/white"/>
+            android:backgroundTint="@color/white" />
 
         <Button
             android:id="@+id/button"
@@ -116,7 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="18dp"
             android:background="?android:attr/listDivider"
-            android:backgroundTint="@color/white"/>
+            android:backgroundTint="@color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -147,7 +147,7 @@
             android:layout_width="match_parent"
             android:layout_height="16dp"
             android:background="?android:attr/listDivider"
-            android:backgroundTint="@color/white"/>
+            android:backgroundTint="@color/white" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -161,7 +161,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="OU"/>
+                android:text="OU" />
 
             <View
                 android:layout_width="match_parent"
@@ -186,20 +186,20 @@
             android:layout_width="match_parent"
             android:layout_height="16dp"
             android:background="?android:attr/listDivider"
-            android:backgroundTint="@color/white"/>
+            android:backgroundTint="@color/white" />
 
         <TextView
             android:id="@+id/facebook"
             android:layout_width="wrap_content"
-            android:layout_height="24dp"
+            android:layout_height="wrap_content"
             android:drawableStart="@drawable/facebook"
-            android:text="  Continuer avec Facebook"
+            android:drawablePadding="20dp"
+            android:text="Continuer avec Facebook"
             android:textAlignment="center"
             android:textColor="@color/dark_blue"
             android:textSize="18dp" />
 
     </LinearLayout>
-
 
 
 </android.support.constraint.ConstraintLayout>
